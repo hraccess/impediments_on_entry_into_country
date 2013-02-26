@@ -593,14 +593,6 @@ function impediments_on_entry_into_country_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'br_requirement_into_country',
       'default_value' => array(
-        0 => array(
-          'entity' => {
-            "item_id" : null,
-            "field_name" : "field_br_req_into_impact",
-            "field_value" : { "und" : [ { "value" : "0" } ] },
-            "field_br_req_into_country_impact" : { "und" : [  ] }
-          },
-        ),
       ),
       'deleted' => '0',
       'description' => '',
