@@ -186,7 +186,7 @@ function impediments_on_entry_into_country_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_status_of_request-field_request_denied_delayed_by'.
+  /* Exported field: 'field_collection_item-field_status_of_request-field_request_denied_delayed_by'.
   $fields['field_collection_item-field_status_of_request-field_request_denied_delayed_by'] = array(
     'field_config' => array(
       'active' => '1',
@@ -288,9 +288,9 @@ function impediments_on_entry_into_country_field_default_fields() {
         'weight' => '2',
       ),
     ),
-  );
+  );*/
 
-  // Exported field: 'field_collection_item-field_status_of_request-field_request_status'.
+  /* Exported field: 'field_collection_item-field_status_of_request-field_request_status'.
   $fields['field_collection_item-field_status_of_request-field_request_status'] = array(
     'field_config' => array(
       'active' => '1',
@@ -362,7 +362,7 @@ function impediments_on_entry_into_country_field_default_fields() {
         'weight' => '1',
       ),
     ),
-  );
+  );*/
 
   // Exported field: 'node-br_requirement_into_country-body'.
   $fields['node-br_requirement_into_country-body'] = array(
