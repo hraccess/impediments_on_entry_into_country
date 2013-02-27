@@ -39,7 +39,6 @@ features[field][] = node-br_requirement_into_country-field_status_of_request
 features[field][] = node-br_requirement_into_country-field_type_of_bureaucratic_requi
 features[field][] = node-br_requirement_into_country-title_field
 features[node][] = br_requirement_into_country
-features[taxonomy][] = access_constraints_incident_type
 features[taxonomy][] = bureaucratic_requirement_type
 features[variable][] = comment_anonymous_br_requirement_into_country
 features[variable][] = comment_br_requirement_into_country
