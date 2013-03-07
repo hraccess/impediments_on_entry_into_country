@@ -1,14 +1,35 @@
 <?php
 /**
  * @file
- * impediments_on_entry_into_country.strongarm.inc
+ * impediment_on_entry_into_the_country.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function impediments_on_entry_into_country_strongarm() {
+function impediment_on_entry_into_the_country_strongarm() {
   $export = array();
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_br_requirement_into_country';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_br_requirement_into_country'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_br_requirement_into_country';
+  $strongarm->value = '[node:field_date] [node:field_type_of_bureaucratic_requi] [node:field-organization-affected]';
+  $export['auto_entitylabel_pattern_node_br_requirement_into_country'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_br_requirement_into_country';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_br_requirement_into_country'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -126,8 +147,7 @@ function impediments_on_entry_into_country_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_br_requirement_into_country';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
+    0 => 'promote',
   );
   $export['node_options_br_requirement_into_country'] = $strongarm;
 

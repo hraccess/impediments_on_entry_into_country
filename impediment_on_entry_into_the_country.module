@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Impediment on entry into the country feature.
+ */
+
+include_once 'impediment_on_entry_into_the_country.features.inc';

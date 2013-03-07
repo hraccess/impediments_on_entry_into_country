@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * impediments_on_entry_into_country.features.field.inc
+ * impediment_on_entry_into_the_country.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function impediments_on_entry_into_country_field_default_fields() {
+function impediment_on_entry_into_the_country_field_default_fields() {
   $fields = array();
 
   // Exported field: 'field_collection_item-field_br_req_into_impact-field_br_req_into_country_impact'.
@@ -132,11 +132,7 @@ function impediments_on_entry_into_country_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'field_br_req_into_impact',
-      'default_value' => array(
-        0 => array(
-          'value' => '0',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -186,7 +182,7 @@ function impediments_on_entry_into_country_field_default_fields() {
     ),
   );
 
-  /* Exported field: 'field_collection_item-field_status_of_request-field_request_denied_delayed_by'.
+  // Exported field: 'field_collection_item-field_status_of_request-field_request_denied_delayed_by'.
   $fields['field_collection_item-field_status_of_request-field_request_denied_delayed_by'] = array(
     'field_config' => array(
       'active' => '1',
@@ -288,9 +284,9 @@ function impediments_on_entry_into_country_field_default_fields() {
         'weight' => '2',
       ),
     ),
-  );*/
+  );
 
-  /* Exported field: 'field_collection_item-field_status_of_request-field_request_status'.
+  // Exported field: 'field_collection_item-field_status_of_request-field_request_status'.
   $fields['field_collection_item-field_status_of_request-field_request_status'] = array(
     'field_config' => array(
       'active' => '1',
@@ -362,7 +358,7 @@ function impediments_on_entry_into_country_field_default_fields() {
         'weight' => '1',
       ),
     ),
-  );*/
+  );
 
   // Exported field: 'node-br_requirement_into_country-body'.
   $fields['node-br_requirement_into_country-body'] = array(
@@ -474,97 +470,7 @@ function impediments_on_entry_into_country_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '8',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-br_requirement_into_country-field_access_constraints'.
-  $fields['node-br_requirement_into_country-field_access_constraints'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_access_constraints',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'access_constraints_incident_type',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'br_requirement_into_country',
-      'default_value' => array(
-        0 => array(
-          'tid' => '730',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 12,
-        ),
-        'entityreference_view_widget' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_access_constraints',
-      'label' => 'Access Constraints & Incident Types',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'hs_taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_hs',
-        'weight' => '2',
+        'weight' => '9',
       ),
     ),
   );
@@ -592,8 +498,7 @@ function impediments_on_entry_into_country_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'br_requirement_into_country',
-      'default_value' => array(
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -720,7 +625,7 @@ function impediments_on_entry_into_country_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_date',
-      'label' => 'Date',
+      'label' => 'Date of submition',
       'required' => 1,
       'settings' => array(
         'default_value' => 'now',
@@ -748,24 +653,53 @@ function impediments_on_entry_into_country_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-br_requirement_into_country-field_number_of_days'.
-  $fields['node-br_requirement_into_country-field_number_of_days'] = array(
+  // Exported field: 'node-br_requirement_into_country-field_incident_type_impediment'.
+  $fields['node-br_requirement_into_country-field_incident_type_impediment'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_number_of_days',
+      'field_name' => 'field_incident_type_impediment',
       'field_permissions' => array(
         'type' => '0',
       ),
-      'foreign keys' => array(),
-      'indexes' => array(),
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
       'locked' => '0',
-      'module' => 'number',
-      'settings' => array(),
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'views',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'test_field_behavior' => array(
+              'status' => 0,
+            ),
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'view' => array(
+            'args' => array(),
+            'display_name' => 'entityreference_1',
+            'view_name' => 'incident_types_for_impediment_on_entry_into_the_country',
+          ),
+        ),
+        'target_type' => 'taxonomy_term',
+      ),
       'translatable' => '0',
-      'type' => 'number_integer',
+      'type' => 'entityreference',
     ),
     'field_instance' => array(
       'bundle' => 'br_requirement_into_country',
@@ -775,15 +709,12 @@ function impediments_on_entry_into_country_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'number',
+          'module' => 'entityreference',
           'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 0,
-            'thousand_separator' => ' ',
+            'link' => FALSE,
           ),
-          'type' => 'number_integer',
-          'weight' => 11,
+          'type' => 'entityreference_label',
+          'weight' => 12,
         ),
         'entityreference_view_widget' => array(
           'label' => 'above',
@@ -805,22 +736,26 @@ function impediments_on_entry_into_country_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_number_of_days',
-      'label' => 'How long did it take to get an answer? (positive or negative)',
+      'field_name' => 'field_incident_type_impediment',
+      'label' => 'Incident Type',
       'required' => 0,
       'settings' => array(
-        'max' => '',
-        'min' => '',
-        'prefix' => '',
-        'suffix' => '',
+        'behaviors' => array(
+          'taxonomy-index' => array(
+            'status' => TRUE,
+          ),
+          'test_instance_behavior' => array(
+            'status' => 0,
+          ),
+        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'number',
+        'active' => 1,
+        'module' => 'options',
         'settings' => array(),
-        'type' => 'number',
-        'weight' => '7',
+        'type' => 'options_select',
+        'weight' => '2',
       ),
     ),
   );
@@ -938,7 +873,7 @@ function impediments_on_entry_into_country_field_default_fields() {
   $fields['node-br_requirement_into_country-field_organization_affected'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_organization_affected',
@@ -972,7 +907,9 @@ function impediments_on_entry_into_country_field_default_fields() {
             ),
           ),
           'view' => array(
-            'args' => array(),
+            'args' => array(
+              0 => 'name_field',
+            ),
             'display_name' => 'entityreference_1',
             'view_name' => 'organizations_affected',
           ),
@@ -1126,7 +1063,7 @@ function impediments_on_entry_into_country_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '9',
+        'weight' => '8',
       ),
     ),
   );
@@ -1278,7 +1215,7 @@ function impediments_on_entry_into_country_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_type_of_bureaucratic_requi',
-      'label' => 'Administrative procedure submitted',
+      'label' => 'Type of administrative procedure submitted',
       'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1409,19 +1346,18 @@ function impediments_on_entry_into_country_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('A field replacing node title.');
-  t('Access Constraints & Incident Types');
-  t('Administrative procedure submitted');
-  t('Date');
+  t('Date of submition');
   t('Description');
-  t('How long did it take to get an answer? (positive or negative)');
   t('If denied/delayed, whom');
   t('Impact');
+  t('Incident Type');
   t('Sector(s) affected');
   t('Status of Submission');
   t('Submission Status');
   t('Submited By');
   t('Submited To');
   t('Title');
+  t('Type of administrative procedure submitted');
   t('Value');
 
   return $fields;
